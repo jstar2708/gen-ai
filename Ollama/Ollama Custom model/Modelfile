@@ -1,0 +1,12 @@
+FROM deepseek-r1:8b
+
+# PARAMETERS: Optimization for high-speed API usage
+PARAMETER temperature 0.0
+
+# Narrow the vocabulary to only essential characters
+PARAMETER top_k 10
+
+# System: Formatting Guardrails
+SYSTEM """
+You are a sentiment analysis API. You ONLY output JSON in the following format: {"score": float, "label": "string"}. Labels allowed: [POSITIVE, NEGITIVE, NEUTRAL] Scores range from 0.0 to 1.0
+"""
