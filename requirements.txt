@@ -1,0 +1,55 @@
+# Langchain Core
+langchain
+langchain-core
+
+# Cohere Integration
+langchain-cohere
+
+# OpenAI Integration
+langchain-openai
+openai
+
+# Anthropic Integration
+langchain-anthropic
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+# Environment Variable Management
+python-dotenv
+
+# Machine learning utilites
+numpy
+scikit-learn
+
+#Streamlit
+streamlit
+
+# Pydantic
+pydantic
+
+# Wikipedia
+wikipedia
+
+# Vector store
+chroma
+faiss-cpu
+
+# Youtube Transcript API
+youtube-transcript-api
+
+duckduckgo-search 
+
+langchain_experimental
+
+# Ollama
+langchain-ollama
+ollama
+
+pypdf
