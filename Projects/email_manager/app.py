@@ -72,7 +72,7 @@ def main():
             if not page_token:
                 logging.info("All emails processed")
                 break
-        elif user_input == "all":
+        elif user_input.lower() == "all":
             do_process_all = True
             user_input = "y"
         elif user_input.lower() == "n":
