@@ -53,3 +53,7 @@ langchain-ollama
 ollama
 
 pypdf
+
+# LangGraph
+langgraph
+grandalf
