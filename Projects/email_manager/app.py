@@ -10,7 +10,7 @@ logging.basicConfig(
 
 def email_manager(chain, gmail_service, next_page_token):
     total_processed = 0
-    messages, next_page_token = gmail_service.list_inbox_messages(max_results=50)
+    messages, next_page_token = gmail_service.list_inbox_messages(max_results=50, page_token=next_page_token)
     emails_list = []
     for message in messages:
         emails_list.append(gmail_service.get_message_details(message["id"]))
@@ -69,6 +69,8 @@ def main():
             current_emails_processed, next_page_token = email_manager(chain, gmail_service, page_token)
             total_emails_processed += current_emails_processed
             page_token = next_page_token
+            logging.info("Next page token: %s", page_token)
+            logging.info("Processed Emails: %s", total_emails_processed)
             if not page_token:
                 logging.info("All emails processed")
                 break
