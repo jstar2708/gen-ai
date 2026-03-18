@@ -52,8 +52,15 @@ langchain_experimental
 langchain-ollama
 ollama
 
+# PDF tools
 pypdf
+marker-pdf
 
 # LangGraph
 langgraph
 grandalf
+
+# Crew AI
+crewai 
+crewai[tools]
+crewai[litellm]
