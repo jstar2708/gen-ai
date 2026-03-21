@@ -3,7 +3,6 @@ from src.config import llm
 from src.agents import researcher_agent, writer_agent
 from src.preprocessor import Preprocessor
 from dotenv import load_dotenv
-from crewai.memory.unified_memory import Memory
 
 load_dotenv()
 
@@ -41,10 +40,6 @@ research_crew = Crew(
     tasks=[research_task, synthesis_task],
     process=Process.sequential,  # Researcher finishes -> Writer starts
     verbose=True,
-    memory=Memory(
-        llm="ollama/kimi-k2.5:cloud",
-        embedder={"provider": "ollama", "config": {"model_name": "qllama/bge-small-en-v1.5:latest"}},
-    ),
 )
 
 # 4. Run the Assistant
