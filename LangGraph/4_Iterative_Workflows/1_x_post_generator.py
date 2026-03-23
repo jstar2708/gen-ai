@@ -128,7 +128,7 @@ def route_evaluation(state: TweetState):
     ):
         return "approved"
     else:
-        return "optimize_tweet"
+        return "needs_improvement"
 
 
 graph = StateGraph(TweetState)
