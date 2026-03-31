@@ -64,3 +64,9 @@ grandalf
 crewai 
 crewai[tools]
 crewai[litellm]
+
+# Streamlit
+streamlit
+
+# Database Checkpoint
+langgraph-checkpoint-sqlite
