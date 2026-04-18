@@ -2,13 +2,14 @@ from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Annotated
 from langchain_core.messages import BaseMessage
 from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatOllama(model="gemma3:4b", temperature=0)
+llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
 
 class ChatState(TypedDict):

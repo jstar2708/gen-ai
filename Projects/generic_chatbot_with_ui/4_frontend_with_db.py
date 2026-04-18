@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessageChunk
 from langraph_backend_with_db_4 import chatbot, retreive_all_threads
 import uuid
 
@@ -88,7 +88,9 @@ if user_input:
                 config=config,
                 stream_mode="messages",
             )
+            if isinstance(message_chunk, AIMessageChunk)
         )
         st.session_state["message_history"].append(
             {"role": "assistant", "content": ai_message}
         )
+        print(st.session_state['message_history'])
